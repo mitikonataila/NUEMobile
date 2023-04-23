@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NUE</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body >
+  <div id="background">
+    <div class="home">
+    <section class="header">
+      <img class="b" src="HEADER COLORIDO GRANDE.gif" style="widht:40" height="200">
+    </section>
+
+    <section class="menu">
+      <a href="controle.html">
+        <div class="Controles">
+          <img class="iconeControles" src="IconeControles.svg">
+          <div class="TextoControles">Controles </div>
+        </div> 
+      </a>
+
+      <a href="historico.html">
+        <div class="Historico">
+          <img class="iconeHistorico" src="IconeHistorico.svg">
+          <div class="TextoHistorico">Histórico </div> 
+        </div>
+      </a>
+
+      <a href="guiadeuso.html">
+        <div class="GuiadeUso">
+          <img class="IconeGuiadeUso" src="IconeGuiadeUso.svg">
+          <div class="TextoGuiadeUso">Guia de Uso </div>
+        </div>
+      </a>
+
+      <a href="config.html">
+        <div class="Configurações">
+          <img class="IconeConfiguracoes" src="IconeConfiguracoes.svg">
+          <div class="TextoConfiguracoes">Configurações </div>
+        </div>
+      </a>
+
+    </section>
+    </div>
+  </div>
+
+  <div id="Popup">
+  <div id="BackgroundOverlay">
+     
+     <section class="OverlayText">
+      <text class="OverlayTit">Coleta e Uso de Dados</text>
+      <text class="OverlayBody"><p class="dados">A coleta de dados no nosso aplicativo se restringe o uso da função <b>‘Histórico’</b>, sendo os seguintes dados coletados:</p>
+  <p class="dados"><b>Dados da sua conta</b> (e-mail, senha, faceID ou TouchID)</p>
+  <p class="dados"><b>Dados de uso</b> (frequência de vibração, tempo de uso, frequência cardíaca).</p>
+        </text>
+        <text class="OverlayBody"><p class="dados">A qualquer momento você pode <b>gerenciar</b> as permissões de coleta de dados do app, baixar ou excluir os seus dados armazenados.</p></text>
+       </section>
+  
+       <section class="OverlayFooter">
+  <div class="BotPriv">
+  <a href="#" class="TextoBotPriv">Configurar Privacidade</a>
+  </a>
+  </div>
+    <footer class="BackOverlay">
+  <botton id ="voltarOverlay">
+       <p id="IrParaHome">Ir para Home</botton>
+    </div>
+    </footer>
+  </section> 
+  </div>  
+  </div>
+
+  <script>
+    function openPopup() {
+  document.getElementById("Popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("Popup").style.display = "none";
+}
+
+let goHomeBtn = document.getElementById("voltarOverlay")
+
+console.log(goHomeBtn)
+
+goHomeBtn.addEventListener("click", function() {
+  closePopup();
+});
+  </script>
+</body>
+
+</html>
