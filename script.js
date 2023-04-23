@@ -30,26 +30,27 @@ connectButton.addEventListener('click', function() {
 let nivel = 0
 
 function mudaNivel(){
+  console.log(nivel)  
   if(nivel === 0){
-    tracinhoUM.style.backgroundColor = '#FFFFF';
-    tracinhoDOIS.style.backgroundColor = '#FFFFF';
-    tracinhoTRES.style.backgroundColor = '#FFFFF';
-    tracinhoQUATRO.style.backgroundColor = '#FFFFF';
+    tracinhoUM.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoDOIS.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoTRES.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoQUATRO.style.backgroundColor = 'rgb(255,255,255)';
   } else if( nivel === 1){
     tracinhoUM.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
-    tracinhoDOIS.style.backgroundColor = '#FFFFF';
-    tracinhoTRES.style.backgroundColor = '#FFFFF';
-    tracinhoQUATRO.style.backgroundColor = '#FFFFF';
+    tracinhoDOIS.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoTRES.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoQUATRO.style.backgroundColor = 'rgb(255,255,255)';
   } else if( nivel === 2){
     tracinhoUM.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
     tracinhoDOIS.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
-    tracinhoTRES.style.backgroundColor = '#FFFFF';
-    tracinhoQUATRO.style.backgroundColor = '#FFFFF';
+    tracinhoTRES.style.backgroundColor = 'rgb(255,255,255)';
+    tracinhoQUATRO.style.backgroundColor = 'rgb(255,255,255)';
   } else if( nivel === 3){
     tracinhoUM.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
     tracinhoDOIS.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
     tracinhoTRES.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
-    tracinhoQUATRO.style.backgroundColor = '#FFFFF';
+    tracinhoQUATRO.style.backgroundColor = 'rgb(255,255,255)';
   } else if( nivel === 4){
     tracinhoUM.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
     tracinhoDOIS.style.backgroundColor = 'rgba(148, 98, 61, 0.7)';
@@ -70,6 +71,7 @@ minusButton.addEventListener('click', function() {
   if (nivel > 0) {
     nivel --;
   }
+  console.log("menos")
   mudaNivel()
   send(`#g${nivel}`)
 });
@@ -250,8 +252,5 @@ function send(data) {
 function writeToCharacteristic(characteristic, data) {
   characteristic.writeValue(new TextEncoder().encode(data));
 }
-
-
-
 
 
